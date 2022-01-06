@@ -85,6 +85,7 @@ body {
             width: 350px;
             border-bottom: solid 1px hsla(240, 6%, 50%, 10%);
             padding: 15px 0;
+            overflow: hidden;
         }
         .dropdown div {
             display: flex;
@@ -92,11 +93,19 @@ body {
             align-items: center;   
         }
         .txt {
-            display: none;
+            position: relative;
+            height: 0;
             margin-top: 15px;
             color: hsl(240, 6%, 50%);
-
+            opacity: 0;
+            transition: 0.5s;
         }
-        .disp {
-            display: inline-block;
-        }
+        
+        /* javascript*/
+            .disp {
+                height: 50px;
+                opacity: 1;
+            }
+            .retourne {
+                transform: rotateX(180deg);
+            }
